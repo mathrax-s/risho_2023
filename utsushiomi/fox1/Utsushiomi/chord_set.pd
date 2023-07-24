@@ -1,0 +1,33 @@
+#N canvas 37 148 450 300 10;
+#X obj 74 25 inlet;
+#X floatatom 140 121 5 0 0 0 - - -;
+#X obj 235 120 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 140 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 140 165 % 5;
+#X obj 220 165 / 5;
+#X obj 220 187 int;
+#X obj 220 209 * 12;
+#X obj 140 229 +;
+#X obj 140 251 tabwrite chord;
+#X obj 140 143 t f f f;
+#X obj 140 187 tabread \$1;
+#X obj 140 78 metro 1;
+#X obj 140 99 counter 0 0 24;
+#X connect 0 0 3 0;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 3 0 12 0;
+#X connect 4 0 11 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 1;
+#X connect 8 0 9 0;
+#X connect 10 0 4 0;
+#X connect 10 1 5 0;
+#X connect 10 2 9 1;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 1 0;
+#X connect 13 3 2 0;

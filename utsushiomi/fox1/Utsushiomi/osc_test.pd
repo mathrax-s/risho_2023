@@ -1,0 +1,10 @@
+#N canvas 437 0 450 300 10;
+#X floatatom 18 78 5 0 0 0 - - -, f 5;
+#X floatatom 156 94 5 0 0 0 - - -, f 5;
+#X obj 18 119 sel 0 1 2 3 4 5;
+#X obj 156 119 osc-send localhost 4001 test;
+#X text 13 10 ADDRESS : localhost PORT : 4001;
+#X obj 18 48 osc-rcv 4001 test;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 5 0 0 0;
